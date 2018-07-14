@@ -1,6 +1,6 @@
 # your-package-name
 
-add here some description about your package.
+[GraphiQL](https://github.com/graphql/graphiql) middleware for [express](https://expressjs.com/). Initial code is extracted from [Apollo server](https://github.com/apollographql/apollo-server).
 
 ## Installation
 
@@ -12,4 +12,10 @@ yarn add express-graphiql-middleware
 
 ## Usage
 
-Please add here some code examples/docs how to use your package!
+```js
+import expressGraphiqlMiddleware from 'express-graphiql-middleware';
+
+// ... app is express application
+
+app.get('/graphiql', expressGraphiqlMiddleware({ endpointURL: '/graphql' }));
+```
