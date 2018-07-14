@@ -1,12 +1,20 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 sudo: false
 cache:
   directories:
-    - "node_modules"
+  - node_modules
 install:
-  - yarn
+- yarn
 script:
-  - yarn lint
-  - yarn build
+- yarn lint
+- yarn build
+deploy:
+  provider: npm
+  email: ertikass@gmail.com
+  api_key:
+    secure: fKYuZBf/U8PcFFAT8Afe0g3Q6mXwDugd0WaUMQ63tfTpgvhd2x573THqtrMAzkpnaHUOzxGLr5cAQqq893UxCIe8pwlN7F5Z30TAoLeVe0ennsVEXH4DJjODKqrpAVi8Ts81bZP6cST9JYCjfyFoI/Nc7mEN+7nJjt3bhV4RDLY4Ug+KSoGU3sqJMrBLiBZptSJpKHPHTSxY6OTucu0VEDHnKjH15r2u18vCcsuyUD5YzfpA0z+OckWuf6CH8V3c12LmapB9SJmIBFcv4oQiTuLhLzVFmdd9rxa4k34BMU8Hfb7D9kemgbS2h6hhyslMXIGaBiwWuOEf9+uVvZDfrLu7orwJs6K8/qEdBu70Mz+dRUCqpcOgs1x+CseRgZwfwL0ScOzgJzr5nPPIvZU85eyj5yN9TsK/QQ+1lz6ywkle559rwE1Uu9tkYWOhRXEnIh1FsQAMf1vE7AxtR9x+zDvPsCPQXKJzoNccIhej8ynraNCo8appN5iUS3RUhwefVRuWByMT8fPqYP8HzutQsA7V6a+9Yogrre4v71iT5bd3gUfwFEzEltwlYboPzEqR5lNSu3h7uWSuxzdvtaL8EgHkihr36cXUQnLYBu92zp/oIIeIDxZYQZ7Fybe5+ecME2/WX2oiJiwW+dpkx/AcQzPOtuMX88/UEVPgd7LRY4w=
+  skip_cleanup: true
+  on:
+    tags: true
