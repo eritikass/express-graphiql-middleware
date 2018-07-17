@@ -1,11 +1,11 @@
 {
   "name": "express-graphiql-middleware",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GraphiQL middleware for express",
   "author": "Siim Tiilen <ertikass@gmail.com>",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/eritikass/express-graphiql-middleware.git"
+    "type": "git",
+    "url": "https://github.com/eritikass/express-graphiql-middleware.git"
   },
   "license": "MIT",
   "main": "dist/index.js",
